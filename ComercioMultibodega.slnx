@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Catalogo.Api/">
+    <Project Path="Catalogo.Api/Catalogo.Api/Catalogo.Api.csproj" />
+  </Folder>
+  <Folder Name="/Inventario.Api/">
+    <Project Path="Inventario.Api/Inventario.Api/Inventario.Api.csproj" />
+  </Folder>
+  <Folder Name="/Pedidos.Api/">
+    <Project Path="Pedidos.Api/Pedidos.Api/Pedidos.Api.csproj" />
+  </Folder>
+</Solution>

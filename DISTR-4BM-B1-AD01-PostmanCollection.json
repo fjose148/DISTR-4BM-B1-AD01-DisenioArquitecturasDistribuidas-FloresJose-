@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "7a35e028-1b2a-43c2-a42e-cf54345bbef2",
+		"name": "DISTR-4BM-B1-AD01-ComercioMultibodega",
+		"description": "Colección completa para la práctica de Comercio Multibodega - Aplicaciones Distribuidas 4BM (DISTR-4BM-B1-AD01). Incluye pruebas para Catalogo.Api, Inventario.Api y Pedidos.Api con respuestas HTTP 200, 201, 400 y 404.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01_Catalogo",
+			"item": [
+				{
+					"name": "Crear Categoría (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Laptops\",\n  \"descripcion\": \"Equipos portátiles\"\n}"
+						},
+						"url": {
+							"raw": "{{catalogoUrl}}/api/categoria",
+							"host": [
+								"{{catalogoUrl}}"
+							],
+							"path": [
+								"api",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Marca (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"HP\",\n  \"paisOrigen\": \"EEUU\"\n}"
+						},
+						"url": {
+							"raw": "{{catalogoUrl}}/api/marca",
+							"host": [
+								"{{catalogoUrl}}"
+							],
+							"path": [
+								"api",
+								"marca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto Validado (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCategoria\": 1,\n  \"idMarca\": 1,\n  \"nombre\": \"ProBook 450 G8\",\n  \"sku\": \"HP-PRO-001\",\n  \"precio\": 850.00,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "{{catalogoUrl}}/api/producto",
+							"host": [
+								"{{catalogoUrl}}"
+							],
+							"path": [
+								"api",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Probar Error 400 - Validación de Entrada",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"\",\n  \"precio\": -10\n}"
+						},
+						"url": {
+							"raw": "{{catalogoUrl}}/api/producto",
+							"host": [
+								"{{catalogoUrl}}"
+							],
+							"path": [
+								"api",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Probar Error 404 - No Encontrado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{catalogoUrl}}/api/producto/999",
+							"host": [
+								"{{catalogoUrl}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02_Inventario",
+			"item": [
+				{
+					"name": "Crear Bodega (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Bodega Central\",\n  \"ciudad\": \"Quito\",\n  \"direccion\": \"Av. Galo Plaza Lasso\"\n}"
+						},
+						"url": {
+							"raw": "{{inventarioUrl}}/api/bodega",
+							"host": [
+								"{{inventarioUrl}}"
+							],
+							"path": [
+								"api",
+								"bodega"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Existencia (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"stock\": 50\n}"
+						},
+						"url": {
+							"raw": "{{inventarioUrl}}/api/existencia",
+							"host": [
+								"{{inventarioUrl}}"
+							],
+							"path": [
+								"api",
+								"existencia"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "03_Pedidos",
+			"item": [
+				{
+					"name": "Crear Cliente (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombres\": \"Jose Flores\",\n  \"cedula\": \"1724567890\",\n  \"correo\": \"jflores@ejemplo.com\"\n}"
+						},
+						"url": {
+							"raw": "{{pedidosUrl}}/api/cliente",
+							"host": [
+								"{{pedidosUrl}}"
+							],
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Pedido con Detalle (201 Created)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCliente\": 1,\n  \"detalles\": [\n    {\n      \"idProducto\": 1,\n      \"cantidad\": 2,\n      \"precioUnitario\": 850.00\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{pedidosUrl}}/api/pedido",
+							"host": [
+								"{{pedidosUrl}}"
+							],
+							"path": [
+								"api",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "catalogoUrl",
+			"value": "https://localhost:7001",
+			"type": "string"
+		},
+		{
+			"key": "inventarioUrl",
+			"value": "https://localhost:7002",
+			"type": "string"
+		},
+		{
+			"key": "pedidosUrl",
+			"value": "https://localhost:7003",
+			"type": "string"
+		}
+	]
+}
+

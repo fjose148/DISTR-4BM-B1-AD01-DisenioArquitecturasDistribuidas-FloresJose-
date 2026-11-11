@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "c1f108b3-3a87-4d7a-a489-cf74719b137d",
+		"name": "Catalogo.Api",
+		"description": "Colección de pruebas para el microservicio Catalogo.Api (Categorias, Marcas y Productos)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Listar Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Categoria por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/categorias/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Categoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Smartphones\",\n  \"descripcion\": \"Telefonos inteligentes de ultima generacion\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCategoria\": 1,\n  \"nombre\": \"Laptops y Computadoras\",\n  \"descripcion\": \"Equipos portatiles y de escritorio\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/categorias/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/categorias/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marcas",
+			"item": [
+				{
+					"name": "Listar Marcas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/marcas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Marca por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/marcas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"marcas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Marca",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Samsung\",\n  \"paisOrigen\": \"Corea del Sur\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/marcas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Marca",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idMarca\": 1,\n  \"nombre\": \"ASUS ROG\",\n  \"paisOrigen\": \"Taiwan\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/marcas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"marcas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Marca",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/marcas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"marcas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Listar Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/productos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Producto por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/productos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCategoria\": 1,\n  \"idMarca\": 1,\n  \"nombre\": \"Laptop ROG Zephyrus G14\",\n  \"sku\": \"ASUS-ROG-G14\",\n  \"precio\": 1650.00,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/productos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto (Validación SKU Duplicado - 400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCategoria\": 1,\n  \"idMarca\": 1,\n  \"nombre\": \"Laptop Copia\",\n  \"sku\": \"ASUS-ZB-16\",\n  \"precio\": 500.00,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/productos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto (Validación Categoria Inexistente - 400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCategoria\": 999,\n  \"idMarca\": 1,\n  \"nombre\": \"Producto Invalido\",\n  \"sku\": \"INV-001\",\n  \"precio\": 100.00,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/productos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idProducto\": 1,\n  \"idCategoria\": 1,\n  \"idMarca\": 1,\n  \"nombre\": \"Zenbook Pro 16 Edición Especial\",\n  \"sku\": \"ASUS-ZB-16\",\n  \"precio\": 1550.00,\n  \"estado\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/productos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/productos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5292",
+			"type": "string"
+		}
+	]
+}
+

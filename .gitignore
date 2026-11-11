@@ -1,0 +1,36 @@
+## Carpetas de compilación .NET
+**/bin/
+**/obj/
+
+## Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.rsuser
+
+## Archivos del PDF del docente (no se entrega en el repo)
+*.pdf
+
+## Scripts SQL de creación de BD (datos sensibles de conexión)
+catalogodb.txt
+InventarioDB.txt
+pedidosdb.txt
+
+## Scripts de prueba internos
+scratch/
+
+## Proyectos de referencia de clase (no son parte de la entrega)
+LibroB/
+InventarioApi/
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+[Ll]ogs/
+
+## Otros
+*.bak
+*.tmp

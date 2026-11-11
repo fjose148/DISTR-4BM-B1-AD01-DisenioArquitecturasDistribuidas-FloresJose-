@@ -1,0 +1,22 @@
+## Build and Release Folders
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-specific files
+*.rsuser
+*.suo
+*.userprefs
+
+## Windows temp files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
